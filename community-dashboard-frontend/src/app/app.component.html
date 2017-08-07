@@ -1,0 +1,24 @@
+<ul class="nav nav-pills">
+  <li role="presentation"> <a [routerLink]="['/']">舉辦活動次數</a> </li>
+  <li role="presentation"><a [routerLink]="['/eventspermonth']">每月舉辦活動次數</a></li>
+  <li role="presentation"><a [routerLink]="['/totaleventsperweek']">社群最常在哪天辦活動</a></li>
+  <li role="presentation"><a [routerLink]="['/eventsperweek']">各社群最常在哪天辦活動</a></li>
+  <li role="presentation"><a [routerLink]="['/attendingperevent']">各社群活動平均報名人數</a></li>
+</ul>
+
+
+<div>
+<router-outlet></router-outlet>
+</div>
+
+
+<p>
+  目前資料來源未必涵蓋所有社群，我們會努力補齊所有社群
+</p>
+<p>
+資料來源： <a href="{{ dataUrl }}"> {{ dataUrl }} </a>
+</p>
+
+<p>
+  Written by <a href="http://kjelly.tw"> kjelly</a> (果凍) 
+</p>

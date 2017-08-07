@@ -1,0 +1,13 @@
+<div class="conainer-fluid">
+  <div class="row">
+    <div class="col-md-11">
+      <div style="display: block">
+        <canvas baseChart [data]="chartData" [labels]="chartLabels" [legend]="chartLegend" [chartType]="chartType"
+          (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)">
+        </canvas>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div> 報名人數並非實際參加人數，無法得知實際參加人數。 </div>

@@ -1,0 +1,24 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-11" >
+        <span *ngFor="let item of groupList" #groupListTemplate>
+          <label htmlFor="chk_{{item}}">
+            <input id="chk_{{item}}" type="checkbox" checked="checked"> 
+            {{ item }}
+          </label>
+        </span>
+        <button (click)="updateWithSelectedGruop($event)">update</button>
+        <button (click)="uncheck($event)">uncheck</button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-11">
+      <div style="display: block;">
+        <canvas baseChart width="400" height="400" [datasets]="chartData" [labels]="chartLabels" [options]="chartOptions" [legend]="chartLegend"
+          [chartType]="chartType">
+        </canvas>
+      </div>
+    </div>
+  </div>
+</div>
+
