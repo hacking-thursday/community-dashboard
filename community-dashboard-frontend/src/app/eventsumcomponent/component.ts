@@ -24,12 +24,10 @@ export class EventSumComponent implements OnInit {
     this.meetupService.getEvents().then(data => {
       this.raw = data
       for (const i of this.raw['groups']){
-        console.log(i)
         if (i['events'].length > 0) {
           this.data[i['name']] = i['events'].length
         }
       }
-      console.log(this.data)
       const label: Array<string> = []
       const value = []
 
@@ -39,9 +37,6 @@ export class EventSumComponent implements OnInit {
           value.push(this.data[i].toString())
         }
       }
-
-      console.log(label)
-      console.log(value)
 
       // 這是必要的寫法
       // 否則會觸發 ng-chart 的 bug
