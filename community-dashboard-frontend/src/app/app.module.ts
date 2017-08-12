@@ -10,6 +10,7 @@ import { EventPerMonthComponent } from './eventspermonth/component';
 import { TotalEventPerWeekComponent} from './totaleventsperweek/component';
 import { EventPerWeekComponent} from './eventsperweek/component';
 import { AttendingPerEventComponent } from './attendingperevent/component';
+import { SearchPanel } from './searchpanel/component';
 import { routing } from './app.routing';
 import { MeetupService } from './services/meetupService';
 
@@ -17,7 +18,7 @@ import { MeetupService } from './services/meetupService';
   declarations: [
     AppComponent, EventSumComponent
     , EventPerMonthComponent, TotalEventPerWeekComponent, EventPerWeekComponent,
-    AttendingPerEventComponent
+    AttendingPerEventComponent, SearchPanel
   ],
   imports: [
     BrowserModule, routing, ChartsModule, HttpModule

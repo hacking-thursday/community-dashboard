@@ -1,0 +1,36 @@
+<div class="conainer-fluid">
+  <div class="row">
+    <div class="col-md-11">
+      <div class="search-box">
+          <div>輸入一個關鍵字，搜索有出現該關鍵字的活動</div>
+          <input type="text" #keywordInput (keyup.enter)="runSearch()">
+          <button (click)="runSearch">search</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div *ngFor="let event of results" style="border-style:dashed;">
+      <div class="conainer-fluid">
+        <div class="row">
+          <div class="col-md-4">
+            群組名稱: {{ event.group }}
+          </div>
+          <div class="col-md-8">
+            活動名稱: {{ event.name }}
+          </div>
+          
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div> {{ event.short }} </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <a href="{{ event.url }}"> {{ event.url }} </a>
+          </div>
+        </div>
+      </div>
+    </div>
+<div style="display: none;" #hiddenElement></div>
