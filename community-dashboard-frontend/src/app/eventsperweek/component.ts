@@ -27,12 +27,12 @@ export class EventPerWeekComponent implements OnInit {
     this.meetupService.getEvents().then(data => {
       this.raw = data
       const localCharData = []
-      for (let i of this.raw['groups']) {
+      for (const i of this.raw['groups']) {
         if (i['events'].length === 0) {
           continue
         }
         const g = {label: i['name'], data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]}
-        for (let e of i['events']){
+        for (const e of i['events']) {
           const t = new Date(e['start_datetime'])
           g.data[t.getDay()] += 1
         }

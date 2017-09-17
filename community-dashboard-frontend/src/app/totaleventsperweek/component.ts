@@ -24,11 +24,11 @@ export class TotalEventPerWeekComponent implements OnInit {
     this.meetupService.getEvents().then(data => {
       this.raw = data
       for (const i of this.raw['groups']){
-        if (i['events'].length > 0){
+        if (i['events'].length > 0) {
             for (const e of i['events']){
             const t = new Date(e['start_datetime'])
             const day = t.getDay()
-            if (day in this.data){
+            if (day in this.data) {
               this.data[day] += 1
             }else {
               this.data[day] = 1
@@ -61,5 +61,4 @@ export class TotalEventPerWeekComponent implements OnInit {
   public chartHovered(e: any): void {
     console.log(e);
   }
-
 }
