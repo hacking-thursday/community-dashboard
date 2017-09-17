@@ -76,10 +76,10 @@ export class SearchPanel implements OnInit {
       console.log(fuseOutput)
       this.results.length = 0
       for (const i of fuseOutput) {
-        let e = this.data[parseInt(i['item'], 10)]
+        const e = this.data[parseInt(i['item'], 10)]
         if (i['matches'].length > 0) {
           e['short'] = i['matches'][0]['value']
-        }else{
+        }else {
           e['short'] = ''
         }
         this.results.push(e)
