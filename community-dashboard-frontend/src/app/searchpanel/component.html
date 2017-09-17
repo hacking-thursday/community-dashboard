@@ -2,9 +2,9 @@
   <div class="row">
     <div class="col-md-11">
       <div class="search-box">
-          <div>輸入一個關鍵字，搜索有出現該關鍵字的活動</div>
+          <div>使用 fuse.js 搜索活動資訊</div>
           <input type="text" #keywordInput (keyup.enter)="runSearch()">
-          <button (click)="runSearch">search</button>
+          <button (click)="runSearch()">search</button>
       </div>
     </div>
   </div>
